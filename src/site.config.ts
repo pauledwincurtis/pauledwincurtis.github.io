@@ -42,11 +42,11 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		path: "/about/",
-		title: "GMOC",
+		title: "AMOC",
 	},
 	{
 		path: "/Arctic/",
-		title: "Arctic",
+		title: "Arctic Oceanography",
 	},
 	{
 		path: "/GFD/",

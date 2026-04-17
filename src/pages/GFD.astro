@@ -84,12 +84,12 @@ const meta = {
 
     <p class="mb-4">
     Most importantly, this system can be <a class="cactus-link" href="/Keith_Edgar_Equations_Fig1.pdf"" target="_blank">solved</a> quickly!
-    (Code here).
+    (Code here soon).
     </p>
 
     <p class="mb-4">
     Second, we also want to incorporate the effects of moisture (<MathInLine tex="q" />) 
-    and latent heating, which is essential for atmospheric convection. 
+    and latent heating, which are essential for atmospheric convection. 
     In the spirit of <a class="cactus-link inline-block" href="https://doi.org/10.1017/jfm.2018.954" rel="noreferrer"
 	target="_blank">Vallis et al. 2019</a>, we include the effects of latent heating in the original 
     rotating Boussinesq equations through a simple parametrisation:
@@ -103,7 +103,7 @@ const meta = {
     <p class="mb-4">
     Where the Heaviside terms (<MathInLine tex="\\propto\\mathscr{H}(q - q_{s})" />) enable rapid
     (with timescale <MathInLine tex="\\tau"/>) condensation and associated latent heating 
-    (through <MathInLine tex="\\gamma" />) once moisture exceeds the thermodynamically-determined saturation
+    (through <MathInLine tex="\\gamma" />) once moisture exceeds the thermodynamically-determined saturation value
     (<MathInLine tex="q_s"/>), emulating
     atmospheric condensation. 
     </p>
@@ -111,7 +111,7 @@ const meta = {
     <p class="mb-4">
     Can we reduce this system in the same way as before?  First note that this introduces a discontinuous function into the 
     system, which we can't avoid since this is how condensation behaves. Moreover, 
-    additional timescales and variables makes performing the original asymptotic reduction of Julien and Knobloch 
+    additional timescales and variables make performing the original asymptotic reduction of Julien and Knobloch 
     <i>considerably</i> harder. For more on how we tackled this problem and what we found, see 
     <a class="cactus-link" href="https://gfd.whoi.edu/wp-content/uploads/sites/18/2025/12/2024-GFD-Volume-Online-version-reduced.pdf" target="_blank">pages 272-304 here</a>.
     </p>
