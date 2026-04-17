@@ -56,10 +56,10 @@ export const menuLinks: { path: string; title: string }[] = [
 	// 	path: "/posts/",
 	// 	title: "Blog",
 	// },
-	{
-		path: "/notes/",
-		title: "Notes",
-	},
+	// {
+	// 	path: "/notes/",
+	// 	title: "Notes",
+	// },
 	{
 		path: "/35mm",
 		title: "35mm",

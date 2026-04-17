@@ -30,15 +30,23 @@ const latestNotes = allNotes
 ---
 
 <PageLayout meta={{ title: "Home" }}>
-	<section>
-		<h1 class="title mb-12">Home</h1>
-		<p class="mb-4">
-			Hello! I am Paul, a Ph.D. student studying climate dynamics in Alexey Fedorov's lab at Yale University. 
+	<section class="flex flex-col items-center text-center">
+		<img
+			src="/headshot.jpeg"
+			alt="Headshot"
+			class="w-32 h-32 rounded-full object-cover mb-6"
+		/>
+
+		<h1 class="title mb-4">Home</h1>
+
+		<p class="mb-4 max-w-xl">
+			Hello! I am Paul, a Ph.D. student studying climate dynamics in Alexey Fedorov's lab at Yale University.
 			This is a site for research and other personal projects.
-
-
 		</p>
+
 		<SocialList />
+	</section>
+	
 	
 	<!--
 	</section>
