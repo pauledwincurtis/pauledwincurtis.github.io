@@ -1,0 +1,12 @@
+---
+import katex from "katex";
+
+const { tex } = Astro.props;
+
+const html = katex.renderToString(tex, {
+  displayMode: false,
+  throwOnError: false
+});
+---
+
+<span set:html={html} />

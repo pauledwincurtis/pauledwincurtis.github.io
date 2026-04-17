@@ -1,0 +1,294 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "35mm",
+};
+
+
+const collections = [
+  {
+    name: "Yale",
+    photos: [
+      {
+        src: "/photos/Harkness_Tower.jpg",
+        caption: "Harkness Tower",
+      },
+      {
+        src: "/photos/Ingalls_Rink.jpg",
+        caption: "Ingalls Rink",
+      },
+      {
+        src: "/photos/Ingalls_Rink_2.jpeg",
+        caption: "Ingalls Rink",
+      },
+      {
+        src: "/photos/Sterling_Library.jpg",
+        caption: "Sterling Memorial Library",
+      },
+      {
+        src: "/photos/Harkness_Tower_2.jpeg",
+        caption: "Harkness Tower",
+      },
+      {
+        src: "/photos/HQ.jpeg",
+        caption: "Humanities Quadrangle",
+      },
+      {
+        src: "/photos/Ingalls_Rink_3.jpeg",
+        caption: "Ingalls Rink",
+      },
+      {
+        src: "/photos/Selin_Courtyard.jpeg",
+        caption: "Selin Courtyard",
+      },
+      {
+        src: "/photos/Flag.jpeg",
+        caption: "Ingalls Rink",
+      },
+      {
+        src: "/photos/Max.jpeg",
+        caption: "Selin Courtyard",
+      },
+    ],
+  },
+  {
+    name: "Isle of Wight",
+    photos: [
+      {
+        src: "/photos/Godshill_Yew_Tree.jpeg",
+        caption: "All Saints Church, Godshill",
+      },
+      {
+        src: "/photos/All_Saints.jpeg",
+        caption: "All Saints Church, Godshill",
+      },
+      {
+        src: "/photos/Godshill_Stenbury_Sheep.jpeg",
+        caption: "Stenbury Down, Godshill",
+      },
+      {
+        src: "/photos/St_Lawrence_coast.jpeg",
+        caption: "Woody Bay, Saint Lawrence",
+      },
+      {
+        src: "/photos/St_Lawrence_rock.jpeg",
+        caption: "St. Catherine's Point, Niton Undercliff",
+      },
+      {
+        src: "/photos/St_Lawrence_old_church.jpeg",
+        caption: "Old Church, Saint Lawrence",
+      },
+      {
+        src: "/photos/Saint_Lawrence_Old_Church_2.jpeg",
+        caption: "Old Church, Saint Lawrence",
+      },
+      {
+        src: "/photos/Steephill_Cove.jpeg",
+        caption: "Steephill_Cove, Ventnor",
+      },
+      {
+        src: "/photos/Godshill_relic.jpeg",
+        caption: "All Saints Church, Godshill",
+      },
+      {
+        src: "/photos/Freshwater_Bay_Cliffs.jpeg",
+        caption: "Freshwater Bay, Freshwater",
+      },
+      {
+        src: "/photos/Ventnor_Rocks.jpeg",
+        caption: "Ventnor Bay, Ventnor",
+      },
+      {
+        src: "/photos/Compton_Bay_BW.jpeg",
+        caption: "Compton Bay, Brook",
+      },
+      {
+        src: "/photos/Ventnor_Botanics.jpeg",
+        caption: "Ventnor Botanics, Ventnor",
+      },
+      {
+        src: "/photos/Freshwater_Bay_2.jpeg",
+        caption: "Freshwater Bay, Freshwater",
+      },
+      {
+        src: "/photos/Blackgang.jpeg",
+        caption: "Blackgang, Niton Undercliff",
+      },
+      {
+        src: "/photos/Compton_1.jpeg",
+        caption: "Compton Bay, Brook",
+      },
+      {
+        src: "/photos/Watershoot_Bay.jpeg",
+        caption: "Watershoot Bay, Niton Undercliff",
+      },
+      {
+        src: "/photos/Surfing.jpeg",
+        caption: "Surfing at Shanklin",
+      },
+    ],
+  },
+  {
+    name: "Travel - USA",
+    photos: [
+      {
+        src: "/photos/Vermont_1.jpeg",
+        caption: "Windham County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_2.jpeg",
+        caption: "Windham County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_4.jpeg",
+        caption: "Windham County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_3.jpeg",
+        caption: "Windham County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_5.jpeg",
+        caption: "Windham County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_6.jpeg",
+        caption: "Caledonia County, Vermont",
+      },
+      {
+        src: "/photos/Vermont_7.jpeg",
+        caption: "Caledonia County, Vermont",
+      },
+      {
+        src: "/photos/New_York_1.jpeg",
+        caption: "Brooklyn, New York",
+      },
+      {
+        src: "/photos/New_York_2.jpeg",
+        caption: "Brooklyn, New York",
+      },
+      {
+        src: "/photos/Colorado_1.jpeg",
+        caption: "Boulder County, Colorado",
+      },
+      {
+        src: "/photos/Colorado_2.jpeg",
+        caption: "Boulder County, Colorado",
+      },
+      {
+        src: "/photos/Colorado_3.jpeg",
+        caption: "Boulder County, Colorado",
+      },
+      {
+        src: "/photos/California_1.jpeg",
+        caption: "San Francisco, California",
+      },
+    ],
+  },
+  {
+    name: "Travel - Europe",
+    photos: [
+      {
+        src: "/photos/Trieste_1.jpeg",
+        caption: "Trieste, Italy",
+      },
+      {
+        src: "/photos/Trieste_2.jpeg",
+        caption: "Trieste, Italy",
+      },
+      {
+        src: "/photos/Trieste_3.jpeg",
+        caption: "Trieste, Italy",
+      },
+      {
+        src: "/photos/Trieste_4.jpeg",
+        caption: "Trieste, Italy",
+      },
+      {
+        src: "/photos/Belgium_1.jpeg",
+        caption: "Groese Polders, Belgium",
+      },
+      {
+        src: "/photos/Belgium_2.jpeg",
+        caption: "Leuven, Belgium",
+      },
+      {
+        src: "/photos/Belgium_3.jpeg",
+        caption: "Leuven, Belgium",
+      },
+      {
+        src: "/photos/Belgium_4.jpeg",
+        caption: "Leuven, Belgium",
+      },
+      {
+        src: "/photos/Belgium_5.jpeg",
+        caption: "Leuven, Belgium",
+      },
+      {
+        src: "/photos/Belgium_6.jpeg",
+        caption: "Elversele, Belgium",
+      },
+      {
+        src: "/photos/Belgium_7.jpeg",
+        caption: "Groese Polders, Belgium",
+      },
+      {
+        src: "/photos/Ghent_1.jpeg",
+        caption: "Ghent, Belgium",
+      },
+      {
+        src: "/photos/France_1.jpeg",
+        caption: "Paris, France",
+      },
+      {
+        src: "/photos/France_2.jpeg",
+        caption: "Paris, France",
+      },
+      {
+        src: "/photos/France_3.jpeg",
+        caption: "Paris, France",
+      },
+      {
+        src: "/photos/France_4.jpeg",
+        caption: "Paris, France",
+      },
+      {
+        src: "/photos/Sweden_1.jpeg",
+        caption: "Stockholm, Sweden",
+      },
+    ],
+  },
+];
+---
+
+<PageLayout meta={meta}>
+  <h1 class="title mb-10">Pictures!</h1>
+
+  <p class="mb-10">
+  All pictures taken on a 1982 Olympus OM-10, which I bought in 2022. 
+  Mostly a mix of Kodak portra (160/400/800) and Tmax (400/3200). 
+  Some good friends and family featured.
+  </p>
+
+
+  {collections.map((collection) => (
+    <section class="mb-12">
+      <!-- Subheading between collections -->
+      <h2 class="text-xl font-semibold mb-4">
+        {collection.name}
+      </h2>
+
+      <div class="columns-2 md:columns-3 gap-4 space-y-4">
+        {collection.photos.map((photo) => (
+          <div class="break-inside-avoid">
+            <img src={photo.src} class="w-full rounded" />
+            <p class="text-sm mt-1">{photo.caption}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</PageLayout>
+

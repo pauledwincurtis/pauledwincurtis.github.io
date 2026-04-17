@@ -13,15 +13,30 @@ const socialLinks: {
 	name: string;
 }[] = [
 	{
+		friendlyName: "Email",
+		link: "mailto:paul.curtis@yale.edu",
+		name: "mdi:email",
+	},
+	{
+		friendlyName: "LinkedIn",
+		link: "https://linkedin.com/in/paul-edwin-curtis-287a44171",
+		name: "mdi:linkedin",
+	},
+	{
+		friendlyName: "Google Scholar",
+		link: "https://scholar.google.com/citations?user=hcW3p0sAAAAJ&hl=en",
+		name: "mdi:magnify",
+	},
+	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
+		link: "https://github.com/pauledwincurtis",
 		name: "mdi:github",
 	},
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
-	<p>Find me on</p>
+	<p>You can find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (

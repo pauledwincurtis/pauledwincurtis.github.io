@@ -3,34 +3,108 @@ import PageLayout from "@/layouts/Base.astro";
 
 const meta = {
 	description: "I'm a starter theme for Astro.build",
-	title: "About",
+	title: "Research",
 };
 ---
 
 <PageLayout meta={meta}>
-	<h1 class="title mb-12">About</h1>
-	<div class="prose prose-sm prose-cactus max-w-none">
-		<p>
-			Hi, I’m a starter Astro. I’m particularly great for getting you started with your own blogging
-			website.
-		</p>
-		<p>Here are my some of my awesome built in features:</p>
-		<ul class="list-inside list-disc" role="list">
-			<li>I'm ultra fast as I'm a static site</li>
-			<li>I'm fully responsive</li>
-			<li>I come with a light and dark mode</li>
-			<li>I'm easy to customise and add additional content</li>
-			<li>I have Tailwind CSS styling</li>
-			<li>Shiki code syntax highlighting</li>
-			<li>Satori for auto generating OG images for blog posts</li>
-		</ul>
-		<p>
-			Clone or fork my <a
-				class="cactus-link inline-block"
-				href="https://github.com/chrismwilliams/astro-cactus"
-				rel="noreferrer"
-				target="_blank">repo</a
-			> if you like me!
-		</p>
+	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+	<h1 class="title mb-12">Equilibrium Responses of the Atlantic Ocean Meridional Overturning 
+	Circulation to Radiative Forcing (with 
+	<a class="cactus-link inline-block"
+		href="https://earth.yale.edu/profile/alexey-fedorov"
+		rel="noreferrer"
+		target="_blank">Alexey Fedorov</a>)
+	</h1>
+
+	<h2 class="text-xl font-semibold mt-8 mb-2">Why AMOC?</h2>
+	
+	<p class="mb-4">
+	
+	</p>
+
+	<h2 class="text-xl font-semibold mt-8 mb-2">Context</h2>
+	
+	<p class="mb-4">
+	Early studies by 
+	<a class="cactus-link inline-block"
+		href="https://doi.org/10.1038/364215a0"
+		rel="noreferrer"
+		target="_blank">Syukuro Manabe and collaborators</a>
+	found that in response to an abrupt doubling (\( 2\times CO_2 \)) and quadrupling (\( 4\times CO_2 \)) of atmospheric carbon
+	dioxide concentrations, the AMOC rapidly weakens from a strong state of overturning into a weak state.
+	<a class="cactus-link inline-block"
+		href="https://doi.org/10.1007/s00382-002-0302-4"
+		rel="noreferrer"
+		target="_blank">They later found</a>
+	that the eventual recovery of the circulation could take centuries to millennia. 
+	</p>
+
+	<p class="mb-4">
+	However, due to the computational expense
+	of the simulations involved, this study is rarely revisited, leaving the long-term response of this circulation system to 
+	global warming largely unknown.
+	</p>
+
+	<h2 class="text-xl font-semibold mt-8 mb-2">CESM Simulations</h2>
+
+	<p class="mb-4">
+	We performed fully-coupled simulations using the 
+	<a class="cactus-link inline-block"
+		href="https://www.cesm.ucar.edu/"
+		rel="noreferrer"
+		target="_blank">Community Earth System Model</a>
+	(CESM1.0.4). First, we extended Manabe's original \( CO_2 \) range to systematically 
+	explore warm and cold climate states, going all the way from \(0.35\times CO_2 \) up to \(16\times CO_2  \). Second, we 
+	greatly extended the integration length beyond other studies. To date, we have produced more than 150,000 years of 
+	fully-coupled climate model output from these simulations, with several individual experiments approaching 20,000 years.
+	This provides us with a unique model laboratory to study equilibrium climate effects: not only is the top of the 
+	atmosphere equilibrated, but ideal age tracer is stabilising in the deep ocean in several experiments (more on this later). 
+	</p>
+
+	<h2 class="text-xl font-semibold mt-8 mb-2">What we found</h2>
+
+	<p class="mb-4">
+	Similar to previous studies, we found that the AMOC rapidly collapses into a weaker state in response to abrupt global 
+	warming. Also similar to previous studies, the AMOC recovers (\( 2\times CO_2 \); 850 years) and quadrupling (\( 4\times 
+	CO_2 \); 3,500 years).
+	</p>
+
+	<p class="mb-4">
+	However, our work using this model has revealed a far richer array of dynamics in the GMOC. For instance, during equilibration
+	to an abrupt (\( 4\times CO_2 \)), we observed the spontaneous activation of the 
+	<a class="cactus-link inline-block"
+		href="https://doi.org/10.1175/JCLI-D-23-0393.1"
+		rel="noreferrer"
+		target="_blank">Pacific Meridional Overturning Circulation</a>
+	(PMOC), which is not present in the present-day climate. 
+	</p>
+
+	<p class="mb-4">
+	In another set of experiments with \(CO_2\) between \(0.5\times\) and \(0.56\times\)
+	the pre-industrial, we observe spontaneous
+	<a class="cactus-link inline-block"
+		href="https://doi.org/10.1175/JCLI-D-24-0377.1"
+		rel="noreferrer"
+		target="_blank">Dansgaard-Oeschger-like Events</a>
+	closely resembling the millennial-scale variability observed in the paleoclimate record.
+	</p>
+
+	<p class="mb-4">
+	An even more exotic transition to a state characterised by millennial-scale variability driven in the 
+	Southern Ocean is observed in several experiments between (\( \approx1.95-2\times CO_2 \)).
+	</p>
+
+	<p class="mb-4">
+	Other interesting topics that we've approached with these experiments include equilibrium climate sensitivity (with
+	<a class="cactus-link inline-block"
+		href="https://nicolefeldl.com/"
+		rel="noreferrer"
+		target="_blank">Nicole Feldl</a>);
+		the role of the AMOC in the Younger Dryas/Bølling-Allerød transition; long-term changes in equatorial SST gradients;
+		and state dependence in interdecadal to centennial AMOC variability.
+	</p>
+
 	</div>
 </PageLayout>

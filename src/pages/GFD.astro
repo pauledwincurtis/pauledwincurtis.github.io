@@ -1,0 +1,120 @@
+---
+import PageLayout from "@/layouts/Base.astro";
+import MathBlock from "@/components/MathBlock.astro";
+import MathInLine from "@/components/MathInLine.astro";
+
+const meta = {
+	description: "I'm a starter theme for Astro.build",
+	title: "Research",
+};
+---
+
+<PageLayout meta={meta}>
+	<h1 class="title mb-12">Idealised Models of Atmospheric Convection</h1>
+
+    <p class="mb-4">
+    Theories of atmospheric convection underpin our understanding of weather and climate. In full, 
+    atmospheric convection is a remarkably complex phenomenon, hence it is essential to have relatively simple, interpretable analytic models to link observed atmospheric phenomena to 
+    the underlying physics. 
+    </p>
+    
+    <p class="mb-4">
+    For my 2024 GFD Summer Program project at WHOI, I aimed to develop an analytical model 
+    of atmospheric convection interweaving the effects of (i) moist thermodynamics, (ii) planetary rotation, and 
+    (iii) deep-reaching (non-hydrostatic) vertical convection. To do this I worked with 
+    <a class="cactus-link inline-block" href="https://empslocal.ex.ac.uk/people/staff/gv219/" rel="noreferrer"
+	target="_blank">Geoff Vallis</a>, <a class="cactus-link inline-block" href="https://ceps.unh.edu/person/gregory-chini" rel="noreferrer"
+	target="_blank">Greg Chini</a>, <a class="cactus-link inline-block" href="http://keaton-burns.com/" rel="noreferrer"
+	target="_blank">Keaton Burns</a>, and <a class="cactus-link inline-block" href="https://sites.google.com/view/basilegallet/" rel="noreferrer"
+	target="_blank">Basile Gallet</a>. Our work made extensive use of the <a class="cactus-link inline-block" href="https://dedalus-project.org/about/" rel="noreferrer"
+	target="_blank">Dedalus</a> framework and the blackboards of Walsh Cottage. 
+    </p>
+
+    <h2 class="text-xl font-semibold mt-8 mb-2">Problem Description</h2>
+
+    <p class="mb-4">
+    Let's start with a bad model for the atmosphere - Rayleigh Bénard convection (RBC) - the classical problem of fluid flow
+    between two horizontal plates: the top cold; the bottom warm. As the vertical temperature gradient is increased, the system
+    transitions from a state of thermal conduction, to thermal convection. The classic linear stability analysis of 
+    <a class="cactus-link inline-block" href="    https://doi.org/10.1080/14786441608635602" rel="noreferrer"target="_blank">Rayleigh</a>
+    finds this to occur at a critical value of the Rayleigh number: <MathInLine tex="Ra_c=27\\pi^4/4" />.
+    </p>
+
+    <p class="mb-4">
+    First, to make RBC more applicable for settings such as atmospheres, we want to include rotation, whilst ensuring that vertical convective 
+    motions remain dominant in the dynamics. 
+    Specifically, we base our analysis on the <a class="cactus-link inline-block" href="https://doi.org/10.1063/1.2741042" rel="noreferrer"
+	target="_blank">rapidly-rotating non-hydrostatic theory</a> of Keith Julien and Edgar Knobloch (a.k.a. non-hydrostatic quasi-geostrophic balanced equations). 
+    Their model for rotationally-constrained RBC is derived by taking the asymptotic limit 
+    <MathInLine tex="Ro\\to 0" /> of the rotating Boussinesq system:
+    </p>
+
+    <MathBlock tex="\\frac{\\mathrm{D} \\mathbf{u}}{\\mathrm{D} t} + f_0\\hat{\\mathbf{z}}\\times\\mathbf{u}= -\\frac{1}{\\rho_{0}}\\nabla p + b\\hat{\\mathbf{z}} + \\nu\\nabla^{2}\\mathbf{u}" />
+	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}\\mathbf{u}" />
+    <MathBlock tex="\\nabla\\cdot\\mathbf{u}=0" />
+
+    <p class="mb-4"/>
+    with fixed-temperature boundary conditions. 
+    </p>
+
+    <p class="mb-4"/>
+    In the limit of rapid rotation, convection should be constrained to tall, thin vertical columnar 
+    structures through the Taylor-Proudman constraint. This <i>a-priori</i> scale separation between the 
+    horizontal and vertical length scales is exploited by introducing a vertical aspect ratio: 
+    <MathInLine tex="A_{Z} := H/L" /> and corresponding 'slow' vertical co-ordinate 
+    <MathInLine tex="Z := A_{Z}^{-1}z" />, which allows non-hydrostatic motions. 
+    </p>
+
+    <p class="mb-4"/>
+    Their procedure eventually yields:
+    </p>
+
+    <MathBlock tex="\\partial_{t}\\nabla_{\\perp}^{2}\\phi + J(\\psi,\\nabla_{\\perp}^{2}\\phi) + \\partial_{Z}\\psi = \\frac{\\widetilde{Ra}}{Pr}b' + \\nabla_{\\perp}^{4}\\phi" />
+	<MathBlock tex="\\partial_{t}\\nabla^{2}_{\\perp}\\psi + J(\\psi, \\nabla^{2}_{\\perp}\\psi) - \\partial_{Z}\\nabla_{\\perp}^{2}\\phi = \\nabla^{4}_{\\perp}\\psi" />
+	<MathBlock tex="\\partial_{t}b' + J(\\psi,b') + \\nabla_{\\perp}^{2}\\phi\\partial_{Z}\\overline{b} = Pr^{-1}\\nabla_{\\perp}^{2}b'" />
+	<MathBlock tex="\\partial_{T}\\overline{b} + \\partial_{Z}(\\overline{b'\\nabla_{\\perp}^{2}\\phi}) = Pr^{-1}\\partial_{Z}^{2}\\overline{b}" />
+
+    <p class="mb-4">
+    Where the top two equations arise from the momentum equation (<MathInLine tex="\\phi,\\psi" /> arise from a Helmholtz
+    decomposition of the streamfunction), and the bottom two from the buoyancy equation. <MathInLine tex="\\overline{(...)}" /> denotes
+    an average over 'fast' scales. Since these equations fall out under the limit <MathInLine tex="Ro\\to 0" />, rotation is "hard baked" into these equations.
+    Different values of the (re-scaled) Rayleigh (<MathInLine tex="\\widetilde{Ra}" />) and Prandtl (<MathInLine tex="Pr" />) numbers allow
+    us to access different characteristic regimes of convection. 
+    </p>
+
+    <p class="mb-4">
+    Most importantly, this system can be <a class="cactus-link" href="/Keith_Edgar_Equations_Fig1.pdf"" target="_blank">solved</a> quickly!
+    (Code here).
+    </p>
+
+    <p class="mb-4">
+    Second, we also want to incorporate the effects of moisture (<MathInLine tex="q" />) 
+    and latent heating, which is essential for atmospheric convection. 
+    In the spirit of <a class="cactus-link inline-block" href="https://doi.org/10.1017/jfm.2018.954" rel="noreferrer"
+	target="_blank">Vallis et al. 2019</a>, we include the effects of latent heating in the original 
+    rotating Boussinesq equations through a simple parametrisation:
+    </p>
+
+    <MathBlock tex="\\frac{\\mathrm{D} \\mathbf{u}}{\\mathrm{D} t} + f_0\\hat{\\mathbf{z}}\\times\\mathbf{u}= -\\frac{1}{\\rho_{0}}\\nabla p + b\\hat{\\mathbf{z}} + \\nu\\nabla^{2}\\mathbf{u}" />
+	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}\\mathbf{u} + \\gamma\\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
+    <MathBlock tex="\\frac{\\mathrm{D} q}{\\mathrm{D} t} = \\kappa_{q}\\nabla^{2}\\mathbf{u} - \\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
+    <MathBlock tex="\\nabla\\cdot\\mathbf{u}=0" />
+
+    <p class="mb-4">
+    Where the Heaviside terms (<MathInLine tex="\\propto\\mathscr{H}(q - q_{s})" />) enable rapid
+    (with timescale <MathInLine tex="\\tau"/>) condensation and associated latent heating 
+    (through <MathInLine tex="\\gamma" />) once moisture exceeds the thermodynamically-determined saturation
+    (<MathInLine tex="q_s"/>), emulating
+    atmospheric condensation. 
+    </p>
+
+    <p class="mb-4">
+    Can we reduce this system in the same way as before?  First note that this introduces a discontinuous function into the 
+    system, which we can't avoid since this is how condensation behaves. Moreover, 
+    additional timescales and variables makes performing the original asymptotic reduction of Julien and Knobloch 
+    <i>considerably</i> harder. For more on how we tackled this problem and what we found, see 
+    <a class="cactus-link" href="https://gfd.whoi.edu/wp-content/uploads/sites/18/2025/12/2024-GFD-Volume-Online-version-reduced.pdf" target="_blank">pages 272-304 here</a>.
+    </p>
+
+
+</PageLayout>
