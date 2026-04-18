@@ -10,95 +10,93 @@ const meta = {
 <PageLayout meta={meta}>
 	<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-	<h1 class="title mb-12">Equilibrium Responses of the Atlantic Ocean Meridional Overturning 
-	Circulation to Radiative Forcing (with 
-	<a class="cactus-link inline-block"
-		href="https://earth.yale.edu/profile/alexey-fedorov"
-		rel="noreferrer"
-		target="_blank">Alexey Fedorov</a>)
+	<h1 class="title mb-12">Equilibrium Responses of the Global Meridional Overturning 
+	Circulation (GMOC) to Radiative Forcing
 	</h1>
 
 	<p class="mb-4">
-	More here soon!
+	As a Ph.D. student, my central research focus is on the highly nonlinear behaviour of the 
+	largest ocean circulation system on Earth: the Global Meridional Overturning Circulation (GMOC). 
+	This circulation behaves akin to a conveyor belt and maps the connections between various components 
+	of Earth’s surface and deep ocean circulation, and the corresponding transports of heat, carbon, and nutrients.
+	Furthermore, the GMOC is dynamically coupled to other spheres of the climate system, principally the atmosphere 
+	and cryosphere, and hence regulates climate over a vast range of timescales, from decades to millennia.
 	</p>
-
-	<!--
-	<h2 class="text-xl font-semibold mt-8 mb-2">Why AMOC?</h2>
 	
-	<p class="mb-4">
-	
-	</p>
+	<h2 class="text-xl font-semibold mt-8 mb-2">The Equilibrium Response</h2>
 
-	<h2 class="text-xl font-semibold mt-8 mb-2">Context</h2>
-	
 	<p class="mb-4">
-	Early studies by 
-	<a class="cactus-link inline-block"
-		href="https://doi.org/10.1038/364215a0"
-		rel="noreferrer"
-		target="_blank">Syukuro Manabe and collaborators</a>
-	found that in response to an abrupt doubling (\( 2\times CO_2 \)) and quadrupling (\( 4\times CO_2 \)) of atmospheric carbon
-	dioxide concentrations, the AMOC rapidly weakens from a strong state of overturning into a weak state.
-	<a class="cactus-link inline-block"
-		href="https://doi.org/10.1007/s00382-002-0302-4"
-		rel="noreferrer"
-		target="_blank">They later found</a>
-	that the eventual recovery of the circulation could take centuries to millennia. 
+	The GMOC's long-term response to external forcing remains poorly understood, in part 
+	since the relevant processes unfold over timescales far beyond those accessible 
+	in state-of-the-art climate simulations. This leaves many interesting questions relatively open:
+
+	<p class="mb-4">
+	1) How many distinct equilibria does the climate system have, corresponding to different equilibria of the GMOC, 
+	even before changes in continental ice sheets, vegetation, or orography are considered?
 	</p>
 
 	<p class="mb-4">
-	However, due to the computational expense
-	of the simulations involved, this study is rarely revisited, leaving the long-term response of this circulation system to 
-	global warming largely unknown.
+	2) Are there conditions under which the ocean meridional overturning circulation does
+	not have any stable equilibria?
 	</p>
 
-	<h2 class="text-xl font-semibold mt-8 mb-2">CESM Simulations</h2>
+	<p class="mb-4">
+	3) How long must a coupled climate model be integrated, after an applied perturbation, to reach a true equilibrium? 
+	</p>
+
+
+	<h2 class="text-xl font-semibold mt-8 mb-2">Our CESM1 Simulations</h2>
 
 	<p class="mb-4">
-	We performed fully-coupled simulations using the 
+	We perform fully-coupled simulations using the 
 	<a class="cactus-link inline-block"
 		href="https://www.cesm.ucar.edu/"
 		rel="noreferrer"
 		target="_blank">Community Earth System Model</a>
-	(CESM1.0.4). First, we extended Manabe's original \( CO_2 \) range to systematically 
-	explore warm and cold climate states, going all the way from \(0.35\times CO_2 \) up to \(16\times CO_2  \). Second, we 
-	greatly extended the integration length beyond other studies. To date, we have produced more than 150,000 years of 
-	fully-coupled climate model output from these simulations, with several individual experiments approaching 20,000 years.
+	(CESM1.0.4), systematically 
+	exploring warm and cold climate states (\(0.35\times CO_2 \) up to \(16\times CO_2  \)). We have also extended the 
+	integration length beyond previous studies: to date producing more than 150,000 years of 
+	fully-coupled climate model output, with several individual experiments approach 20,000 years.
 	This provides us with a unique model laboratory to study equilibrium climate effects: not only is the top of the 
-	atmosphere equilibrated, but ideal age tracer is stabilising in the deep ocean in several experiments (more on this later). 
+	atmosphere equilibrated, but ideal age tracer is stabilising in the deep ocean in several experiments. 
 	</p>
 
-	<h2 class="text-xl font-semibold mt-8 mb-2">What we found</h2>
+	<h2 class="text-xl font-semibold mt-8 mb-2">Rich Quasi-equilibrium Behaviour</h2>
 
 	<p class="mb-4">
-	Similar to previous studies, we found that the AMOC rapidly collapses into a weaker state in response to abrupt global 
-	warming. Also similar to previous studies, the AMOC recovers (\( 2\times CO_2 \); 850 years) and quadrupling (\( 4\times 
-	CO_2 \); 3,500 years).
+	First considering the AMOC - considered the archetypal climate tipping point - we observed the 
+	well-documented rapid transition to a weaker state in response to abrupt global warming. 
+	In this model, 
+	<a class="cactus-link inline-block"
+		href="https://doi.org/10.1007/s00382-024-07185-3"
+		rel="noreferrer"
+		target="_blank">the AMOC eventually recovers </a>
+	to a doubling (\( 2\times CO_2 \); after 850 years) and quadrupling (\( 4\times 
+	CO_2 \); after 3,500 years) of atmospheric \(CO_2 \), but remains in a weaker state even after 20,000 years of integration
+	in \( 8\times CO_2 \).
 	</p>
 
 	<p class="mb-4">
-	However, our work using this model has revealed a far richer array of dynamics in the GMOC. For instance, during equilibration
-	to an abrupt (\( 4\times CO_2 \)), we observed the spontaneous activation of the 
+	Our work using this model has revealed a far richer array of dynamics in the GMOC. For instance, during equilibration
+	to an abrupt \( 4\times CO_2 \) we observed the spontaneous activation of a 
 	<a class="cactus-link inline-block"
 		href="https://doi.org/10.1175/JCLI-D-23-0393.1"
 		rel="noreferrer"
 		target="_blank">Pacific Meridional Overturning Circulation</a>
-	(PMOC), which is not present in the present-day climate. 
+	(PMOC), which is not present in the modern climate. 
 	</p>
 
 	<p class="mb-4">
-	In another set of experiments with \(CO_2\) between \(0.5\times\) and \(0.56\times\)
+	In global cooling experiments, for values of \(CO_2\) between \(0.5\times\) and \(0.56\times\)
 	the pre-industrial, we observe spontaneous
 	<a class="cactus-link inline-block"
 		href="https://doi.org/10.1175/JCLI-D-24-0377.1"
 		rel="noreferrer"
 		target="_blank">Dansgaard-Oeschger-like Events</a>
-	closely resembling the millennial-scale variability observed in the paleoclimate record.
-	</p>
-
-	<p class="mb-4">
-	An even more exotic transition to a state characterised by millennial-scale variability driven in the 
-	Southern Ocean is observed in several experiments between (\( \approx1.95-2\times CO_2 \)).
+	closely resembling the millennial-scale variability observed for colder climates in the paleoclimate record. An even more exotic transition 
+	to a state characterised by millennial-scale variability - this time driven in the 
+	Southern Ocean - is observed in several experiments (\(2\times CO_2, 1.95\times CO_2, ... \)) following several thousands
+	of years of numerical integration.
 	</p>
 
 	<p class="mb-4">
@@ -107,10 +105,9 @@ const meta = {
 		href="https://nicolefeldl.com/"
 		rel="noreferrer"
 		target="_blank">Nicole Feldl</a>);
-		the role of the AMOC in the Younger Dryas/Bølling-Allerød transition; long-term changes in equatorial SST gradients;
+		the role of the AMOC in the last deglaciation; long-term changes in equatorial SST gradients;
 		and state dependence in interdecadal to centennial AMOC variability.
 	</p>
-	-->
 
 	</div>
 </PageLayout>

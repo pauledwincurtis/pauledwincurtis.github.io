@@ -42,7 +42,7 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		path: "/about/",
-		title: "AMOC",
+		title: "GMOC",
 	},
 	{
 		path: "/Arctic/",
