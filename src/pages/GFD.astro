@@ -50,7 +50,7 @@ const meta = {
     </p>
 
     <MathBlock tex="\\frac{\\mathrm{D} \\mathbf{u}}{\\mathrm{D} t} + f_0\\hat{\\mathbf{z}}\\times\\mathbf{u}= -\\frac{1}{\\rho_{0}}\\nabla p + b\\hat{\\mathbf{z}} + \\nu\\nabla^{2}\\mathbf{u}" />
-	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}\\mathbf{u}" />
+	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}b" />
     <MathBlock tex="\\nabla\\cdot\\mathbf{u}=0" />
 
     <p class="mb-4"/>
@@ -62,7 +62,7 @@ const meta = {
     structures through the Taylor-Proudman constraint. This <i>a-priori</i> scale separation between the 
     horizontal and vertical length scales is exploited by introducing a vertical aspect ratio: 
     <MathInLine tex="A_{Z} := H/L" /> and corresponding 'slow' vertical co-ordinate 
-    <MathInLine tex="Z := A_{Z}^{-1}z" />, which allows non-hydrostatic motions. 
+    <MathInLine tex="Z := A_{Z}^{-1}z" />, which will allow non-hydrostatic motions. 
     </p>
 
     <p class="mb-4"/>
@@ -96,8 +96,8 @@ const meta = {
     </p>
 
     <MathBlock tex="\\frac{\\mathrm{D} \\mathbf{u}}{\\mathrm{D} t} + f_0\\hat{\\mathbf{z}}\\times\\mathbf{u}= -\\frac{1}{\\rho_{0}}\\nabla p + b\\hat{\\mathbf{z}} + \\nu\\nabla^{2}\\mathbf{u}" />
-	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}\\mathbf{u} + \\gamma\\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
-    <MathBlock tex="\\frac{\\mathrm{D} q}{\\mathrm{D} t} = \\kappa_{q}\\nabla^{2}\\mathbf{u} - \\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
+	<MathBlock tex="\\frac{\\mathrm{D} b}{\\mathrm{D} t} = \\kappa_{b}\\nabla^{2}b + \\gamma\\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
+    <MathBlock tex="\\frac{\\mathrm{D} q}{\\mathrm{D} t} = \\kappa_{q}\\nabla^{2}q - \\frac{q - q_{s}}{\\tau}\\mathscr{H}(q - q_{s})" />
     <MathBlock tex="\\nabla\\cdot\\mathbf{u}=0" />
 
     <p class="mb-4">
